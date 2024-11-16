@@ -11,6 +11,7 @@ namespace task2_design_patterns.Dtos
         public decimal Price { get; set; }
         public string Size { get; set; }
         public double Diameter { get; set; }
+        public string Type { get; set; }
         public List<PizzaIngredientDto> PizzaIngredientDto { get; set; }
     }
 }

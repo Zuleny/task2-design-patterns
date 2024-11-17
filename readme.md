@@ -76,3 +76,13 @@ Este endpoint permite crear una nueva promocion
   "state": "enabled"
 }
 ```
+- **Example 2:**
+```json
+{
+  "name": "DeliveryGratis",
+  "initDate": "2024-11-15T04:42:40Z",
+  "endDate": "2025-11-15T04:42:40Z",
+  "discount": 50,
+  "state": "enabled"
+}
+```

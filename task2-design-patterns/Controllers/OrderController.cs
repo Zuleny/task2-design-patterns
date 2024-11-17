@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using task2_design_patterns.Dtos;
+using task2_design_patterns.Models;
 using task2_design_patterns.Services;
 
 namespace task2_design_patterns.Controllers
@@ -24,8 +25,8 @@ namespace task2_design_patterns.Controllers
         {
             try
             {
-                int orderId = _orderService.CreateOrder(orderDto);
-                return Ok($"Order {orderId} created successfully.");
+                Order order = _orderService.CreateOrder(orderDto);
+                return Ok($"{order} created successfully.");
             }
             catch (Exception ex)
             {

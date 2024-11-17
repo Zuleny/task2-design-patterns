@@ -10,16 +10,21 @@ namespace task2_design_patterns.Models
         public int Id { get; set; }
         public int Number { get; set; }
         public DateTime DateTime { get; set; }
+        public decimal Price { get; set; }
         public string DeliveryType { get; set; }
         public string PaymentMethod { get; set; }
 
-        // Relación con PizzaOrder (un pedido puede tener múltiples pizzas)
-        public ICollection<PizzaOrder> PizzaOrders { get; set; }
+        public Order(int id, int number, DateTime dateTime, decimal price, string deliveryType, string paymentMethod) {
+            this.Id = id; 
+            this.Number = number; 
+            this.DateTime = dateTime; 
+            this.Price = price; 
+            this.DeliveryType = deliveryType;
+            this.PaymentMethod = paymentMethod; 
+        }
 
-        // Relación con Delivery (un pedido tiene una entrega)
-        public Delivery Delivery { get; set; }
-
-        // Relación con OrderPromotion (un pedido puede tener múltiples promociones)
-        public ICollection<OrderPromotion> OrderPromotions { get; set; }
+        public override string ToString() { 
+            return $"Order [Id={this.Id}, Number={this.Number}, DateTime={this.DateTime}, Price={this.Price:C}, DeliveryType={this.DeliveryType}, PaymentMethod={this.PaymentMethod}]"; 
+        }
     }
 }

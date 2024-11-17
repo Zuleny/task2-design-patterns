@@ -43,6 +43,7 @@ namespace task2_design_patterns
             orderTable.Columns["Id"].AutoIncrementSeed = 1;
             orderTable.Columns.Add("Number", typeof(int));
             orderTable.Columns.Add("DateTime", typeof(DateTime));
+            orderTable.Columns.Add("Total", typeof(decimal));
             orderTable.Columns.Add("DeliveryType", typeof(string));
             orderTable.Columns.Add("PaymentMethod", typeof(string));
             dbInMemory.Tables.Add(orderTable);
